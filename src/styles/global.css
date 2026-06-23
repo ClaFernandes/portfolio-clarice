@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Cores */
+    --coral: #d4735e;
+    --coral-light: rgba(212, 115, 94, 0.10);
+    --coral-border: rgba(212, 115, 94, 0.25);
+    --black: #111111;
+    --cream: #faf8f4;
+    --white: #ffffff;
+    --border: #ede9e0;
+    --border-soft: #f0ece4;
+    --text-muted: #888888;
+    --text-light: #aaaaaa;
+    --text-xlight: #cccccc;
+
+    /* Tipografia */
+    --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+
+    /* Layout */
+    --max-width: 960px;
+    --padding-x: 40px;
+    --section-y: 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--cream);
+    color: var(--black);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--padding-x);
+}
+
+.section {
+    border-bottom: 0.5px solid var(--border);
+}
+
+.section--white {
+    background-color: var(--white);
+}
+
+.section__inner {
+    padding: var(--section-y) 0;
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--coral);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn--dark {
+    background: var(--black);
+    color: var(--white);
+    border: none;
+}
+
+.btn--coral {
+    background: transparent;
+    color: var(--coral);
+    border: 1.5px solid var(--coral);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --padding-x: 20px;
+        --section-y: 32px;
+    }
+}

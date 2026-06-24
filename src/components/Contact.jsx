@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
 import {
   FiLinkedin,
@@ -36,7 +36,7 @@ function Contact({ lang }) {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formRef.current,
-        EMAILJS_PUBLIC_KEY,
+        { publicKey: EMAILJS_PUBLIC_KEY },
       );
       setStatus("success");
       formRef.current.reset();

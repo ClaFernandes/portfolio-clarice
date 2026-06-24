@@ -169,13 +169,14 @@
 }
 
 .proj-btn--outline {
-  color: var(--petrol);
+  color: var(--petrol-light);
   background: transparent;
   border: 1px solid var(--border);
 }
 
 .proj-btn--outline:hover {
-  border-color: var(--petrol);
+  border-color: var(--petrol-light);
+  color: var(--petrol);
 }
 
 .proj-btn--terracota {

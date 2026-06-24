@@ -1,7 +1,7 @@
 /* ─── FOOTER ─────────────────────────────────────────── */
 
 .footer {
-  background: var(--petrol);
+  background: #162f3d;
 }
 
 /* Wave SVG de transição */
@@ -25,7 +25,7 @@
 .footer__logo {
   font-size: 15px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: -0.5px;
 }
 
@@ -35,7 +35,7 @@
 
 .footer__credit {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 /* Ícones sociais */
@@ -45,7 +45,7 @@
 }
 
 .footer__social-link {
-  color: rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.45);
   transition: color 0.2s;
   display: flex;
   align-items: center;

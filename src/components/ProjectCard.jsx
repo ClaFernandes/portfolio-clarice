@@ -73,7 +73,7 @@ function ProjectCard({ project, lang, reverse }) {
           {/* Imagem real ou fundo com letra inicial */}
           {images[0] ? (
             <img
-              src={images[0]}
+              src={`${import.meta.env.BASE_URL}${images[0]}`}
               alt={project.name}
               className="proj-card__img-file"
             />
@@ -169,7 +169,7 @@ function ProjectCard({ project, lang, reverse }) {
               >
                 {images[imgIndex] ? (
                   <img
-                    src={images[imgIndex]}
+                    src={`${import.meta.env.BASE_URL}${images[imgIndex]}`}
                     alt={`${project.name} — vista ${imgIndex + 1}`}
                   />
                 ) : (

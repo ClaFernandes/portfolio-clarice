@@ -29,7 +29,7 @@ function Navbar({ lang, setLang }) {
       <div className="container navbar__inner">
         {/* Logo */}
         <span className="navbar__logo">
-          Clarice<span className="navbar__dot">.</span>
+          Clarice<span className="navbar__dot">Fernandes</span>
         </span>
 
         {/* Links */}

@@ -13,3 +13,10 @@
   color: var(--petrol);
   font-weight: 700;
 }
+
+/* Links automáticos do browser — neutraliza cor e sublinhado */
+.about__text a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+}

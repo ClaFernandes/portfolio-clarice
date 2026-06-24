@@ -13,19 +13,9 @@ import translations from "../data/translations";
 import "../styles/contact.css";
 
 // ─── CONFIGURAÇÃO DO EMAILJS ───────────────────────────
-// 1. Cria conta em https://www.emailjs.com/
-// 2. Vai a Email Services → Add New Service → Gmail/Outlook
-// 3. Vai a Email Templates → Create New Template
-//    Usa estas variáveis no template:
-//      {{from_name}}  → nome do remetente
-//      {{from_email}} → email do remetente
-//      {{message}}    → mensagem
-// 4. Substitui os três valores abaixo pelas tuas chaves
-//    (encontras em Account → General → Public Key)
-
-const EMAILJS_SERVICE_ID = "SEU_SERVICE_ID"; // ex: 'service_abc123'
-const EMAILJS_TEMPLATE_ID = "SEU_TEMPLATE_ID"; // ex: 'template_xyz456'
-const EMAILJS_PUBLIC_KEY = "SUA_PUBLIC_KEY"; // ex: 'abc123XYZ'
+const EMAILJS_SERVICE_ID = "service_w1c0gyf";
+const EMAILJS_TEMPLATE_ID = "template_f43zavn";
+const EMAILJS_PUBLIC_KEY = "Nz7SS1kJtQ1vVGExL";
 
 function Contact({ lang }) {
   const t = translations[lang].contact;

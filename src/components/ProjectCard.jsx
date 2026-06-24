@@ -1,70 +1,65 @@
-import { useState } from 'react'
+import { useState } from "react";
 import {
-  FiGithub, FiExternalLink, FiX,
-  FiChevronLeft, FiChevronRight, FiInfo, FiUsers
-} from 'react-icons/fi'
-import translations from '../data/translations'
-import '../styles/projects.css'
-
-// ─── PROJECT CARD ─────────────────────────────────────
-// Card individual com modal e carrossel de imagens
-//
-// Props:
-//   project — objecto com os dados do projecto (ver projects.js)
-//   lang    — idioma actual ('pt' ou 'en')
-//   reverse — se true, a imagem fica à esquerda
+  FiGithub,
+  FiExternalLink,
+  FiX,
+  FiChevronLeft,
+  FiChevronRight,
+  FiInfo,
+  FiUsers,
+} from "react-icons/fi";
+import translations from "../data/translations";
+import "../styles/projects.css";
 
 function ProjectCard({ project, lang, reverse }) {
-  const t = translations[lang].projects
+  const t = translations[lang].projects;
 
   // Controla se o modal está aberto
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false);
 
   // Índice da imagem actual no carrossel
-  const [imgIndex, setImgIndex] = useState(0)
+  const [imgIndex, setImgIndex] = useState(0);
 
   // Descrições e textos no idioma actual
-  const desc      = lang === 'pt' ? project.descPt      : project.descEn
-  const shortDesc = lang === 'pt' ? project.shortPt     : project.shortEn
-  const teamInfo  = project.team && project.teamInfo
-                    ? project.teamInfo[lang]
-                    : null
+  const desc = lang === "pt" ? project.descPt : project.descEn;
+  const shortDesc = lang === "pt" ? project.shortPt : project.shortEn;
+  const teamInfo =
+    project.team && project.teamInfo ? project.teamInfo[lang] : null;
 
   // Imagens válidas — filtra strings vazios
-  const images = (project.images || []).filter(Boolean)
+  const images = (project.images || []).filter(Boolean);
 
   // Navega para a imagem anterior no carrossel
   function prevImg(e) {
-    e.stopPropagation()
-    setImgIndex(i => (i === 0 ? images.length - 1 : i - 1))
+    e.stopPropagation();
+    setImgIndex((i) => (i === 0 ? images.length - 1 : i - 1));
   }
 
   // Navega para a imagem seguinte no carrossel
   function nextImg(e) {
-    e.stopPropagation()
-    setImgIndex(i => (i === images.length - 1 ? 0 : i + 1))
+    e.stopPropagation();
+    setImgIndex((i) => (i === images.length - 1 ? 0 : i + 1));
   }
 
   // Abre o modal e reinicia o carrossel na primeira imagem
   function openModal() {
-    setImgIndex(0)
-    setModalOpen(true)
+    setImgIndex(0);
+    setModalOpen(true);
   }
 
   function closeModal() {
-    setModalOpen(false)
+    setModalOpen(false);
   }
 
   // Fecha o modal ao clicar no overlay (fundo escuro)
   function handleOverlayClick(e) {
-    if (e.target === e.currentTarget) closeModal()
+    if (e.target === e.currentTarget) closeModal();
   }
 
   return (
     <>
       {/* ── CARD ── */}
-      <article className={`proj-card ${reverse ? 'proj-card--reverse' : ''}`}>
-
+      <article className={`proj-card ${reverse ? "proj-card--reverse" : ""}`}>
         {/* Área da imagem — clicável para abrir modal */}
         <div
           className="proj-card__img"
@@ -73,13 +68,20 @@ function ProjectCard({ project, lang, reverse }) {
           role="button"
           tabIndex={0}
           aria-label={`Ver detalhes de ${project.name}`}
-          onKeyDown={e => e.key === 'Enter' && openModal()}
+          onKeyDown={(e) => e.key === "Enter" && openModal()}
         >
           {/* Imagem real ou fundo com letra inicial */}
-          {images[0]
-            ? <img src={images[0]} alt={project.name} className="proj-card__img-file" />
-            : <span className="proj-card__img-placeholder">{project.name[0]}</span>
-          }
+          {images[0] ? (
+            <img
+              src={images[0]}
+              alt={project.name}
+              className="proj-card__img-file"
+            />
+          ) : (
+            <span className="proj-card__img-placeholder">
+              {project.name[0]}
+            </span>
+          )}
 
           {/* Overlay de hover */}
           <div className="proj-card__img-overlay" aria-hidden="true">
@@ -111,7 +113,7 @@ function ProjectCard({ project, lang, reverse }) {
           <div className="proj-card__btns">
             <button className="proj-btn proj-btn--outline" onClick={openModal}>
               <FiInfo size={12} aria-hidden="true" />
-              {lang === 'pt' ? 'Ver detalhes' : 'View details'}
+              {lang === "pt" ? "Ver detalhes" : "View details"}
             </button>
             {project.github && (
               <a
@@ -149,7 +151,6 @@ function ProjectCard({ project, lang, reverse }) {
           aria-label={project.name}
         >
           <div className="modal">
-
             {/* Botão fechar */}
             <button
               className="modal__close"
@@ -161,21 +162,21 @@ function ProjectCard({ project, lang, reverse }) {
 
             {/* ── CARROSSEL ── */}
             <div className="modal__carousel">
-
               {/* Imagem actual */}
               <div
                 className="modal__carousel-img"
                 style={{ background: project.bg }}
               >
-                {images[imgIndex]
-                  ? <img
-                      src={images[imgIndex]}
-                      alt={`${project.name} — vista ${imgIndex + 1}`}
-                    />
-                  : <span className="modal__carousel-placeholder">
-                      {project.name[0]}
-                    </span>
-                }
+                {images[imgIndex] ? (
+                  <img
+                    src={images[imgIndex]}
+                    alt={`${project.name} — vista ${imgIndex + 1}`}
+                  />
+                ) : (
+                  <span className="modal__carousel-placeholder">
+                    {project.name[0]}
+                  </span>
+                )}
               </div>
 
               {/* Setas — só aparecem com mais de 1 imagem */}
@@ -201,8 +202,11 @@ function ProjectCard({ project, lang, reverse }) {
                     {images.map((_, i) => (
                       <button
                         key={i}
-                        className={`modal__carousel-dot ${i === imgIndex ? 'modal__carousel-dot--active' : ''}`}
-                        onClick={e => { e.stopPropagation(); setImgIndex(i) }}
+                        className={`modal__carousel-dot ${i === imgIndex ? "modal__carousel-dot--active" : ""}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setImgIndex(i);
+                        }}
                         aria-label={`Imagem ${i + 1}`}
                       />
                     ))}
@@ -213,9 +217,8 @@ function ProjectCard({ project, lang, reverse }) {
 
             {/* ── CONTEÚDO DO MODAL ── */}
             <div className="modal__content">
-
               {/* Tags */}
-              <div className="proj-card__tags" style={{ marginBottom: '8px' }}>
+              <div className="proj-card__tags" style={{ marginBottom: "8px" }}>
                 <span className="proj-card__tag">{project.tag}</span>
                 {project.team && (
                   <span className="proj-card__tag proj-card__tag--team">
@@ -240,8 +243,10 @@ function ProjectCard({ project, lang, reverse }) {
               {/* Pills da stack */}
               <p className="modal__stack-label">Stack</p>
               <div className="modal__pills">
-                {project.stack.split(' · ').map(tech => (
-                  <span key={tech} className="modal__pill">{tech}</span>
+                {project.stack.split(" · ").map((tech) => (
+                  <span key={tech} className="modal__pill">
+                    {tech}
+                  </span>
                 ))}
               </div>
 
@@ -270,13 +275,12 @@ function ProjectCard({ project, lang, reverse }) {
                   </a>
                 )}
               </div>
-
             </div>
           </div>
         </div>
       )}
     </>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

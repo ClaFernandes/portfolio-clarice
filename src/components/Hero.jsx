@@ -1,29 +1,21 @@
-import { Link } from 'react-scroll'
-import { HiOutlineLocationMarker } from 'react-icons/hi'
-import translations from '../data/translations'
-import foto from '../assets/foto.jpg'
-import '../styles/hero.css'
-
-// Secção hero — primeira coisa que o utilizador vê
-// Contém: badge de disponibilidade, nome, frase, botões e foto
-// Props:
-//   lang — idioma atual ('pt' ou 'en')
+import { Link } from "react-scroll";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import translations from "../data/translations";
+import foto from "../assets/foto.jpg";
+import "../styles/hero.css";
 
 function Hero({ lang }) {
-  const t = translations[lang].hero
+  const t = translations[lang].hero;
 
   return (
     <section className="hero" id="hero">
-
       {/* Blobs decorativos em coral — efeito de fundo orgânico */}
       <div className="hero__blob hero__blob--1" aria-hidden="true" />
       <div className="hero__blob hero__blob--2" aria-hidden="true" />
 
       <div className="container hero__inner">
-
         {/* Coluna de texto */}
         <div className="hero__content">
-
           {/* Badge de disponibilidade */}
           <div className="hero__badge">
             <span className="hero__badge-dot" aria-hidden="true" />
@@ -55,8 +47,11 @@ function Hero({ lang }) {
             >
               {t.btnProjects}
             </Link>
-            {/* CV — ficheiro em public/cv-clarice.pdf */}
-            <a href="/cv-clarice.pdf" download className="btn btn--coral">
+            <a
+              href={`${import.meta.env.BASE_URL}cv-clarice.pdf`}
+              download
+              className="btn btn--coral"
+            >
               {t.btnCV}
             </a>
           </div>
@@ -81,10 +76,9 @@ function Hero({ lang }) {
             </div>
           </div>
         </div>
-
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

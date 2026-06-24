@@ -1,12 +1,8 @@
-import translations from '../data/translations'
-import '../styles/about.css'
-
-// Secção "Sobre mim"
-// Props:
-//   lang — idioma atual ('pt' ou 'en')
+import translations from "../data/translations";
+import "../styles/about.css";
 
 function About({ lang }) {
-  const t = translations[lang].about
+  const t = translations[lang].about;
 
   return (
     <section className="section section--white" id="sobre">
@@ -16,7 +12,7 @@ function About({ lang }) {
         <p className="about__text">{t.text}</p>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

@@ -1,13 +1,9 @@
-import translations from '../data/translations'
-import timeline from '../data/timeline'
-import '../styles/timeline.css'
-
-// Secção de trajetória profissional em formato de linha do tempo
-// Props:
-//   lang — idioma atual ('pt' ou 'en')
+import translations from "../data/translations";
+import timeline from "../data/timeline";
+import "../styles/timeline.css";
 
 function Timeline({ lang }) {
-  const t = translations[lang].timeline
+  const t = translations[lang].timeline;
 
   return (
     <section className="section" id="trajetoria">
@@ -17,19 +13,18 @@ function Timeline({ lang }) {
 
         <div className="tl__list">
           {timeline.map((item, index) => {
-            const isLast = index === timeline.length - 1
+            const isLast = index === timeline.length - 1;
 
             return (
               <div key={item.id} className="tl__item">
-
                 {/* Ano / período */}
-                <div className="tl__period">
-                  {item.period[lang]}
-                </div>
+                <div className="tl__period">{item.period[lang]}</div>
 
                 {/* Marcador visual — ponto + linha vertical */}
                 <div className="tl__marker" aria-hidden="true">
-                  <div className={`tl__dot ${item.current ? 'tl__dot--active' : ''}`} />
+                  <div
+                    className={`tl__dot ${item.current ? "tl__dot--active" : ""}`}
+                  />
                   {/* Linha vertical só existe entre itens (não no último) */}
                   {!isLast && <div className="tl__line" />}
                 </div>
@@ -39,20 +34,17 @@ function Timeline({ lang }) {
                   <p className="tl__role">
                     {item.role[lang]}
                     {/* Badge "agora" apenas no item atual */}
-                    {item.current && (
-                      <span className="tl__now">{t.now}</span>
-                    )}
+                    {item.current && <span className="tl__now">{t.now}</span>}
                   </p>
                   <p className="tl__place">{item.place}</p>
                 </div>
-
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Timeline
+export default Timeline;

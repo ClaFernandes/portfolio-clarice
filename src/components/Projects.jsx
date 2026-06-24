@@ -1,14 +1,11 @@
-import translations from '../data/translations'
-import projects from '../data/projects'
-import ProjectCard from './ProjectCard'
-import '../styles/projects.css'
-
-// Secção de projetos — lista todos os ProjectCards
-// Props:
-//   lang — idioma atual ('pt' ou 'en')
+import { FiGithub } from "react-icons/fi";
+import translations from "../data/translations";
+import projects from "../data/projects";
+import ProjectCard from "./ProjectCard";
+import "../styles/projects.css";
 
 function Projects({ lang }) {
-  const t = translations[lang].projects
+  const t = translations[lang].projects;
 
   return (
     <section className="section" id="projetos">
@@ -27,9 +24,22 @@ function Projects({ lang }) {
             />
           ))}
         </div>
+
+        {/* Link para o GitHub com mais projectos */}
+        <div className="proj-more">
+          <a
+            href="https://github.com/ClaFernandes"
+            target="_blank"
+            rel="noreferrer"
+            className="proj-btn proj-btn--outline"
+          >
+            <FiGithub size={13} aria-hidden="true" />
+            {t.seeMore}
+          </a>
+        </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

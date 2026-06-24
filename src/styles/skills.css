@@ -1,0 +1,55 @@
+/* ─── SKILLS ─────────────────────────────────────────── */
+
+.skills__cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Label de cada coluna */
+.skills__col-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--petrol-light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.skills__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+/* Pill base */
+.skills__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  background: var(--cream);
+  border: 0.5px solid var(--border);
+  color: var(--petrol-mid);
+  border-radius: 20px;
+  padding: 5px 13px;
+}
+
+/* Pill destacada — skills de desenvolvimento */
+.skills__pill--hl {
+  background: var(--terracota-light);
+  border-color: var(--terracota-border);
+  color: #a03a0b;
+  font-weight: 600;
+}
+
+/* Nível do idioma dentro da pill */
+.skills__pill-level {
+  font-size: 10px;
+  color: var(--petrol-light);
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .skills__cols { grid-template-columns: 1fr; gap: 20px; }
+}

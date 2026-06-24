@@ -1,123 +1,169 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* ─── RESET ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* ─── VARIÁVEIS ──────────────────────────────────────── */
+/*
+  PALETA: Branco + Petróleo + Terracota
+  ─────────────────────────────────────
+  Fundo principal:   #FFFFFF (branco)
+  Fundo alternado:   #F9F8F5 (branco quente — secções alternadas)
+  Texto principal:   #1B3A4B (petróleo escuro)
+  Destaque:          #C1440E (terracota)
+  Footer/nav escuro: #1B3A4B (petróleo)
+  Bordas:            #EEEEEE
+  Texto secundário:  #6B8494 (petróleo claro)
+  Texto muito claro: #A8BACB (petróleo esbatido)
+*/
 :root {
-    /* Cores */
-    --coral: #d4735e;
-    --coral-light: rgba(212, 115, 94, 0.10);
-    --coral-border: rgba(212, 115, 94, 0.25);
-    --black: #111111;
-    --cream: #faf8f4;
-    --white: #ffffff;
-    --border: #ede9e0;
-    --border-soft: #f0ece4;
-    --text-muted: #888888;
-    --text-light: #aaaaaa;
-    --text-xlight: #cccccc;
+  /* Cores principais */
+  --petrol:         #1B3A4B;
+  --petrol-mid:     #3d5566;  /* texto secundário — legível sobre fundo branco */
+  --petrol-light:   #6a8a9e;  /* texto terciário — anos da trajectória, stack */
+  --petrol-xlight:  #96b4c2;  /* texto muito subtil — "Fernandes" esbatido */
 
-    /* Tipografia */
-    --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --terracota:      #C1440E;
+  --terracota-light: rgba(193, 68, 14, 0.09);
+  --terracota-border: rgba(193, 68, 14, 0.22);
 
-    /* Layout */
-    --max-width: 960px;
-    --padding-x: 40px;
-    --section-y: 40px;
+  --white:          #FFFFFF;
+  --cream:          #F9F8F5;
+  --border:         #EEEEEE;
+  --border-soft:    #F4F4F4;
+
+  /* Aliases semânticos — usados nos componentes */
+  --color-bg:       var(--white);
+  --color-bg-alt:   var(--cream);
+  --color-text:     var(--petrol);
+  --color-accent:   var(--terracota);
+  --color-footer:   var(--petrol);
+  --color-muted:    var(--petrol-mid);
+  --color-xmuted:   var(--petrol-light);
+
+  /* Tipografia */
+  --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Layout */
+  --max-width:  1100px;
+  --padding-x:  48px;
+  --section-y:  44px;
 }
 
+/* ─── BASE ───────────────────────────────────────────── */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font);
-    background-color: var(--cream);
-    color: var(--black);
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  font-family: var(--font);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
+/* ─── CONTAINER ──────────────────────────────────────── */
 .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 var(--padding-x);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-x);
 }
 
+/* ─── SECÇÕES ────────────────────────────────────────── */
+/* Secção base — fundo branco */
 .section {
-    border-bottom: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
 }
 
-.section--white {
-    background-color: var(--white);
+/* Secção alternada — fundo creme quente */
+.section--alt {
+  background-color: var(--color-bg-alt);
 }
 
+/* Espaçamento interno das secções */
 .section__inner {
-    padding: var(--section-y) 0;
+  padding: var(--section-y) 0;
 }
 
+/* ─── EYEBROW + TÍTULO ───────────────────────────────── */
+/* Pequeno texto acima do título — ex: "O que construí" */
 .eyebrow {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--coral);
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--terracota);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
+/* Título principal de cada secção */
 .section-title {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--black);
-    letter-spacing: -0.5px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--petrol);
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
 }
 
+/* ─── BOTÕES GLOBAIS ─────────────────────────────────── */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 10px 24px;
-    border-radius: 24px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
 }
 
 .btn:hover {
-    opacity: 0.85;
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 
+/* Botão principal — petróleo escuro */
 .btn--dark {
-    background: var(--black);
-    color: var(--white);
-    border: none;
+  background: var(--petrol);
+  color: var(--white);
 }
 
+/* Botão secundário — contorno terracota */
 .btn--coral {
-    background: transparent;
-    color: var(--coral);
-    border: 1.5px solid var(--coral);
+  background: transparent;
+  color: var(--terracota);
+  border: 1.5px solid var(--terracota);
 }
 
+/* Botão desactivado — ex: CV sem link por agora */
+.btn--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none !important;
+}
+
+/* ─── RESPONSIVO BASE ────────────────────────────────── */
 @media (max-width: 768px) {
-    :root {
-        --padding-x: 20px;
-        --section-y: 32px;
-    }
+  :root {
+    --padding-x: 20px;
+    --section-y: 32px;
+  }
 }

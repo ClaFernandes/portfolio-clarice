@@ -1,0 +1,95 @@
+/* ─── TRAJECTÓRIA ────────────────────────────────────── */
+
+.tl__list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada linha: período | marcador | conteúdo */
+.tl__item {
+  display: grid;
+  grid-template-columns: 100px 20px 1fr;
+  gap: 0 16px;
+  padding: 16px 0;
+  border-bottom: 0.5px solid var(--border-soft);
+  align-items: flex-start;
+}
+
+.tl__item:last-child {
+  border-bottom: none;
+}
+
+/* Período — petróleo muito claro */
+.tl__period {
+  font-size: 11px;
+  color: var(--petrol-light);
+  padding-top: 3px;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* Coluna do marcador */
+.tl__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ponto inactivo */
+.tl__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Ponto activo — item actual em terracota */
+.tl__dot--active {
+  background: var(--terracota);
+  border-color: var(--terracota);
+}
+
+/* Linha vertical entre pontos */
+.tl__line {
+  flex: 1;
+  width: 1px;
+  background: var(--border);
+  margin-top: 5px;
+  min-height: 26px;
+}
+
+/* Cargo/função */
+.tl__role {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--petrol);
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+/* Badge "agora" */
+.tl__now {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  background: var(--terracota);
+  color: var(--white);
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Local/empresa */
+.tl__place {
+  font-size: 12px;
+  color: var(--petrol-mid);
+}
+
+@media (max-width: 540px) {
+  .tl__item { grid-template-columns: 80px 16px 1fr; gap: 0 10px; }
+  .tl__period { font-size: 10px; }
+}

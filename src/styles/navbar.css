@@ -1,0 +1,85 @@
+/* ─── NAVBAR ─────────────────────────────────────────── */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--white);
+  border-bottom: 0.5px solid var(--border);
+  transition: box-shadow 0.2s;
+}
+
+.navbar--scrolled {
+  box-shadow: 0 1px 16px rgba(27, 58, 75, 0.07);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Logo */
+.navbar__logo {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--petrol);
+  letter-spacing: -0.5px;
+  cursor: default;
+}
+
+.navbar__dot {
+  color: var(--terracota);
+}
+
+/* Links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar__link {
+  font-size: 13px;
+  color: var(--petrol-light);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navbar__link:hover {
+  color: var(--petrol);
+}
+
+/* Toggle de idioma */
+.navbar__lang {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-left: 8px;
+}
+
+.navbar__lang-btn {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  color: var(--petrol-light);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Idioma activo — petróleo escuro */
+.navbar__lang-btn--active {
+  background: var(--petrol);
+  color: var(--white);
+  border-radius: 20px;
+}
+
+/* ─── RESPONSIVO ─────────────────────────────────────── */
+@media (max-width: 540px) {
+  .navbar__link { display: none; }
+}

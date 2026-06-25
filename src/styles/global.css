@@ -7,26 +7,26 @@
 }
 
 :root {
-  --petrol: #1B3A4B;
-  --petrol-mid: #3d5566;
-  --petrol-light: #6a8a9e;
-  --petrol-xlight: #96b4c2;
+  --petrol:         #1B3A4B;
+  --petrol-mid:     #3d5566;
+  --petrol-light:   #6a8a9e;
+  --petrol-xlight:  #96b4c2;
 
-  --terracota: #C1440E;
+  --terracota:       #C1440E;
   --terracota-light: rgba(193, 68, 14, 0.09);
-  --terracota-border: rgba(193, 68, 14, 0.22);
+  --terracota-border:rgba(193, 68, 14, 0.22);
 
-  --white: #FFFFFF;
-  --cream: #F9F8F5;
-  --border: #EEEEEE;
-  --border-soft: #F4F4F4;
+  --white:      #FFFFFF;
+  --cream:      #F9F8F5;
+  --border:     #EEEEEE;
+  --border-soft:#F4F4F4;
 
-  --color-bg: var(--white);
+  --color-bg:     var(--white);
   --color-bg-alt: var(--cream);
-  --color-text: var(--petrol);
+  --color-text:   var(--petrol);
   --color-accent: var(--terracota);
   --color-footer: var(--petrol);
-  --color-muted: var(--petrol-mid);
+  --color-muted:  var(--petrol-mid);
   --color-xmuted: var(--petrol-light);
 
   --font: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -38,6 +38,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -46,6 +47,7 @@ body {
   color: var(--color-text);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img {
@@ -134,6 +136,22 @@ a {
 @media (max-width: 768px) {
   :root {
     --padding-x: 20px;
-    --section-y: 32px;
+    --section-y: 28px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --padding-x: 16px;
   }
 }

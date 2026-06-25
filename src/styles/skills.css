@@ -44,9 +44,15 @@
   font-weight: 400;
 }
 
+/* ─── MOBILE ─────────────────────────────────────────── */
 @media (max-width: 640px) {
   .skills__cols {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .skills__pill {
+    font-size: 12px;
+    padding: 6px 13px;
   }
 }

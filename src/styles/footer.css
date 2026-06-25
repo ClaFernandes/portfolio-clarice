@@ -57,3 +57,13 @@
     text-align: center;
   }
 }
+/* ═══ FOOTER MOBILE ══════════════════════════════════ */
+@media (max-width: 480px) {
+  .footer__logo {
+    font-size: 13px;
+  }
+
+  .footer__credit {
+    font-size: 11px;
+  }
+}

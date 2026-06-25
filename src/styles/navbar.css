@@ -73,8 +73,27 @@
   border-radius: 20px;
 }
 
+/* ─── MOBILE ─────────────────────────────────────────── */
 @media (max-width: 540px) {
   .navbar__link {
     display: none;
+  }
+
+  .navbar__inner {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .navbar__logo {
+    font-size: 15px;
+  }
+
+  .navbar__lang {
+    margin-left: 0;
+  }
+
+  .navbar__lang-btn {
+    padding: 3px 9px;
+    font-size: 10px;
   }
 }

@@ -58,17 +58,8 @@
 }
 
 @keyframes pulse {
-
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.55;
-    transform: scale(0.82);
-  }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.55; transform: scale(0.82); }
 }
 
 .hero__badge-text {
@@ -181,28 +172,67 @@
   white-space: nowrap;
 }
 
+/* ─── MOBILE ─────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero__inner {
     grid-template-columns: 1fr;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 48px;
+    padding-top: 28px;
+    padding-bottom: 36px;
+    gap: 16px;
   }
 
   .hero__photo-col {
     order: -1;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+  }
+
+  .hero__photo-wrap {
+    width: 120px;
+    height: 120px;
   }
 
   .hero__badge {
-    margin: 0 auto 16px;
+    margin: 0 auto 14px;
+  }
+
+  .hero__name {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+
+  .hero__role {
+    font-size: 10px;
   }
 
   .hero__desc {
+    font-size: 13px;
+    line-height: 1.7;
     max-width: 100%;
+    margin-bottom: 18px;
   }
 
   .hero__btns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
     justify-content: center;
+  }
+
+  .hero__btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__blob--1 {
+    width: 130px;
+    height: 130px;
+    right: 10px;
+    top: -20px;
+  }
+
+  .hero__blob--2 {
+    display: none;
   }
 }

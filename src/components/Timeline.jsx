@@ -36,7 +36,7 @@ function Timeline({ lang }) {
                     {/* Badge "agora" apenas no item atual */}
                     {item.current && <span className="tl__now">{t.now}</span>}
                   </p>
-                  <p className="tl__place">{item.place}</p>
+                  <p className="tl__place">{typeof item.place === 'object' ? item.place[lang] : item.place}</p>
                 </div>
               </div>
             );

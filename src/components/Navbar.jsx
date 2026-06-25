@@ -6,7 +6,7 @@ import "../styles/navbar.css";
 function Navbar({ lang, setLang }) {
   const t = translations[lang].nav;
 
-  // Controla se a navbar tem sombra (após scroll)
+  // Controla se a navbar tem sombra após scroll
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

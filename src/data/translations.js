@@ -1,11 +1,11 @@
 const translations = {
-  // ── PORTUGUÊS DE PORTUGAL ────────────────────────────
+  // Português
   pt: {
     nav: {
       about: "Sobre",
-      projects: "Projetos",
-      skills: "Competências",
-      timeline: "Trajetória",
+      projects: "Projectos",
+      skills: "Skills",
+      timeline: "Trajectória",
       contact: "Contacto",
     },
 
@@ -16,7 +16,7 @@ const translations = {
       name: "Clarice",
       surname: "Fernandes",
       desc: "Aprendi a contar histórias em palavras. Agora conto-as em código. Desenvolvo interfaces que comunicam.",
-      btnProjects: "Ver projetos",
+      btnProjects: "Ver projectos",
       btnCV: "Download CV",
       location: "Lisboa, Portugal",
     },
@@ -29,16 +29,16 @@ const translations = {
 
     projects: {
       eyebrow: "O que construí",
-      title: "Projetos",
-      btnSee: "Ver projeto ↗",
+      title: "Projectos",
+      btnSee: "Ver projecto ↗",
       btnGithub: "Ver no GitHub ↗",
-      teamBadge: "Projeto em dupla",
+      teamBadge: "Projecto em dupla",
       seeMore: "Ver mais no GitHub ↗",
     },
 
     skills: {
-      eyebrow: "Competências",
-      title: "Competências",
+      eyebrow: "Ferramentas",
+      title: "Skills",
       dev: "Desenvolvimento",
       tools: "Ferramentas",
       langs: "Idiomas",
@@ -46,7 +46,7 @@ const translations = {
 
     timeline: {
       eyebrow: "Percurso",
-      title: "Trajetória",
+      title: "Trajectória",
       now: "agora",
     },
 
@@ -71,12 +71,12 @@ const translations = {
     },
 
     footer: {
-      made: "Feito com React ♥",
+      made: "Feito com React",
       copyright: "© 2026 Clarice Cerqueira Fernandes",
     },
   },
 
-  // ── ENGLISH ──────────────────────────────────────────
+  // Inglês
   en: {
     nav: {
       about: "About",
@@ -115,7 +115,7 @@ const translations = {
 
     skills: {
       eyebrow: "Tools",
-      title: "Competências",
+      title: "Skills",
       dev: "Development",
       tools: "Tools",
       langs: "Languages",
@@ -148,7 +148,7 @@ const translations = {
     },
 
     footer: {
-      made: "Built with React ♥",
+      made: "Built with React",
       copyright: "© 2026 Clarice Cerqueira Fernandes",
     },
   },

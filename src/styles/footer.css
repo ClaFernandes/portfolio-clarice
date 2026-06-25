@@ -1,10 +1,7 @@
-/* ─── FOOTER ─────────────────────────────────────────── */
-
 .footer {
   background: #162f3d;
 }
 
-/* Wave SVG de transição */
 .footer__wave {
   display: block;
   width: 100%;
@@ -15,7 +12,6 @@
   padding: 12px 0 22px;
 }
 
-/* Logo | crédito | sociais */
 .footer__content {
   display: flex;
   align-items: center;
@@ -38,7 +34,6 @@
   color: rgba(255, 255, 255, 0.35);
 }
 
-/* Ícones sociais */
 .footer__socials {
   display: flex;
   gap: 14px;
@@ -56,5 +51,9 @@
 }
 
 @media (max-width: 540px) {
-  .footer__content { flex-direction: column; gap: 10px; text-align: center; }
+  .footer__content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }

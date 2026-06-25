@@ -1,11 +1,8 @@
-/* ─── TRAJECTÓRIA ────────────────────────────────────── */
-
 .tl__list {
   display: flex;
   flex-direction: column;
 }
 
-/* Cada linha: período | marcador | conteúdo */
 .tl__item {
   display: grid;
   grid-template-columns: 100px 20px 1fr;
@@ -19,7 +16,6 @@
   border-bottom: none;
 }
 
-/* Período — petróleo muito claro */
 .tl__period {
   font-size: 11px;
   color: var(--petrol-light);
@@ -28,14 +24,12 @@
   line-height: 1.4;
 }
 
-/* Coluna do marcador */
 .tl__marker {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Ponto inactivo */
 .tl__dot {
   width: 9px;
   height: 9px;
@@ -46,7 +40,6 @@
   margin-top: 3px;
 }
 
-/* Ponto activo — item actual em terracota */
 .tl__dot--active {
   background: var(--terracota);
   border-color: var(--terracota);
@@ -55,12 +48,19 @@
 }
 
 @keyframes tl-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(193, 68, 14, 0.4); }
-  70%  { box-shadow: 0 0 0 6px rgba(193, 68, 14, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(193, 68, 14, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(193, 68, 14, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 6px rgba(193, 68, 14, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(193, 68, 14, 0);
+  }
 }
 
-/* Linha vertical entre pontos */
 .tl__line {
   flex: 1;
   width: 1px;
@@ -69,7 +69,6 @@
   min-height: 26px;
 }
 
-/* Cargo/função */
 .tl__role {
   font-size: 14px;
   font-weight: 600;
@@ -78,7 +77,6 @@
   line-height: 1.4;
 }
 
-/* Badge "agora" */
 .tl__now {
   display: inline-block;
   font-size: 9px;
@@ -91,13 +89,18 @@
   vertical-align: middle;
 }
 
-/* Local/empresa */
 .tl__place {
   font-size: 12px;
   color: var(--petrol-mid);
 }
 
 @media (max-width: 540px) {
-  .tl__item { grid-template-columns: 80px 16px 1fr; gap: 0 10px; }
-  .tl__period { font-size: 10px; }
+  .tl__item {
+    grid-template-columns: 80px 16px 1fr;
+    gap: 0 10px;
+  }
+
+  .tl__period {
+    font-size: 10px;
+  }
 }

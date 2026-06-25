@@ -9,7 +9,7 @@ function Hero({ lang }) {
 
   return (
     <section className="hero" id="hero">
-      {/* Blobs decorativos em coral — efeito de fundo orgânico */}
+      {/* Blobs decorativos em coral */}
       <div className="hero__blob hero__blob--1" aria-hidden="true" />
       <div className="hero__blob hero__blob--2" aria-hidden="true" />
 

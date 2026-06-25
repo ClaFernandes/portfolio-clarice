@@ -1,14 +1,8 @@
-/* ─── PROJECTOS ──────────────────────────────────────── */
-
 .proj-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
-/* ─── CARD — layout vertical (imagem em cima, texto em baixo) ── */
-/* Esta estrutura garante consistência visual independentemente
-   do tamanho ou orientação das screenshots */
 
 .proj-card {
   display: flex;
@@ -25,15 +19,11 @@
   transform: translateY(-2px);
 }
 
-/* reverse não tem efeito no layout vertical — mantido por compatibilidade */
 .proj-card--reverse {
   flex-direction: column;
 }
 
-/* ─── ÁREA DA IMAGEM ─────────────────────────────────── */
-
 .proj-card__img {
-  /* Altura fixa — todas as imagens ficam com a mesma altura */
   height: 200px;
   width: 100%;
   flex-shrink: 0;
@@ -49,7 +39,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* top center — mostra o topo das screenshots, onde está o conteúdo mais relevante */
   object-position: top center;
   transition: transform 0.3s;
 }
@@ -58,14 +47,12 @@
   transform: scale(1.03);
 }
 
-/* Letra inicial — placeholder sem imagem */
 .proj-card__img-placeholder {
   font-size: 52px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.15);
 }
 
-/* Overlay de hover */
 .proj-card__img-overlay {
   position: absolute;
   inset: 0;
@@ -85,8 +72,6 @@
   opacity: 1;
 }
 
-/* ─── CORPO DO CARD ──────────────────────────────────── */
-
 .proj-card__body {
   padding: 20px 24px;
   display: flex;
@@ -95,14 +80,12 @@
   flex: 1;
 }
 
-/* Tags (stack + equipa) */
 .proj-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-/* Badge de stack */
 .proj-card__tag {
   display: inline-flex;
   align-items: center;
@@ -116,7 +99,6 @@
   border-radius: 20px;
 }
 
-/* Badge de equipa */
 .proj-card__tag--team {
   color: var(--petrol-mid);
   background: rgba(27, 58, 75, 0.07);
@@ -142,7 +124,6 @@
   color: var(--petrol-light);
 }
 
-/* Botões no fundo do card */
 .proj-card__btns {
   display: flex;
   gap: 7px;
@@ -150,8 +131,6 @@
   margin-top: auto;
   padding-top: 6px;
 }
-
-/* ─── BOTÕES ─────────────────────────────────────────── */
 
 .proj-btn {
   display: inline-flex;
@@ -189,9 +168,6 @@
   background: rgba(193, 68, 14, 0.15);
 }
 
-/* ─── GRID DE 2 COLUNAS (desktop) ────────────────────── */
-/* Em desktop os cards ficam em grelha de 2 colunas */
-
 @media (min-width: 640px) {
   .proj-list {
     display: grid;
@@ -199,8 +175,6 @@
     gap: 16px;
   }
 }
-
-/* ─── MODAL OVERLAY ──────────────────────────────────── */
 
 .modal-overlay {
   position: fixed;
@@ -223,8 +197,6 @@
     opacity: 1;
   }
 }
-
-/* ─── MODAL ──────────────────────────────────────────── */
 
 .modal {
   background: var(--white);
@@ -271,8 +243,6 @@
 .modal__close:hover {
   color: var(--petrol);
 }
-
-/* ─── CARROSSEL ──────────────────────────────────────── */
 
 .modal__carousel {
   position: relative;
@@ -358,8 +328,6 @@
   transform: scale(1.25);
 }
 
-/* ─── CONTEÚDO DO MODAL ──────────────────────────────── */
-
 .modal__content {
   padding: 20px 24px 24px;
 }
@@ -421,8 +389,6 @@
   gap: 8px;
 }
 
-/* ─── RESPONSIVO MOBILE ──────────────────────────────── */
-
 @media (max-width: 639px) {
   .proj-list {
     grid-template-columns: 1fr;
@@ -432,8 +398,6 @@
     height: 160px;
   }
 }
-
-/* ─── VER MAIS NO GITHUB ─────────────────────────────── */
 
 .proj-more {
   display: flex;
@@ -453,9 +417,6 @@
   border-color: var(--petrol-mid);
   color: var(--petrol);
 }
-
-/* ─── LINKS AUTOMÁTICOS DO BROWSER ──────────────────── */
-/* O browser auto-linka alguns textos — neutraliza a cor */
 
 .proj-card__desc a,
 .proj-card__stack a {

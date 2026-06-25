@@ -19,13 +19,11 @@ function Projects({ lang }) {
               key={project.id}
               project={project}
               lang={lang}
-              // Alterna: par = imagem à direita, ímpar = imagem à esquerda
               reverse={index % 2 !== 0}
             />
           ))}
         </div>
 
-        {/* Link para o GitHub com mais projectos */}
         <div className="proj-more">
           <a
             href="https://github.com/ClaFernandes"

@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiHeart } from "react-icons/fi";
 import translations from "../data/translations";
 import "../styles/footer.css";
 
@@ -27,7 +27,11 @@ function Footer({ lang }) {
             Clarice<span className="footer__dot">.</span>
           </span>
 
-          <p className="footer__credit">{t.made}</p>
+          <p className="footer__credit">
+            {lang === 'pt' ? 'Feito com' : 'Built with'}{' '}
+            <FiHeart size={12} style={{ color: 'var(--terracota)', verticalAlign: 'middle', margin: '0 2px' }} aria-hidden="true" />
+            {' '}React
+          </p>
 
           <div className="footer__socials">
             <a

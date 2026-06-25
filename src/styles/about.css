@@ -1,20 +1,15 @@
-/* ─── SOBRE MIM ──────────────────────────────────────── */
-
 .about__text {
   font-size: 15px;
-  /* Usar a cor de texto principal — petróleo escuro para máxima legibilidade */
   color: var(--petrol);
   line-height: 1.9;
   max-width: 640px;
 }
 
-/* Palavras em negrito ficam ainda mais escuras */
 .about__text strong {
   color: var(--petrol);
   font-weight: 700;
 }
 
-/* Links automáticos do browser — neutraliza cor e sublinhado */
 .about__text a {
   color: inherit;
   text-decoration: none;

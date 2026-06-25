@@ -26,7 +26,7 @@ function ProjectCard({ project, lang, reverse }) {
   const teamInfo =
     project.team && project.teamInfo ? project.teamInfo[lang] : null;
 
-  // Imagens válidas — filtra strings vazios
+  // Imagens válidas 
   const images = (project.images || []).filter(Boolean);
 
   // Navega para a imagem anterior no carrossel
@@ -58,7 +58,7 @@ function ProjectCard({ project, lang, reverse }) {
 
   return (
     <>
-      {/* ── CARD ── */}
+      {/* Card */}
       <article className={`proj-card ${reverse ? "proj-card--reverse" : ""}`}>
         {/* Área da imagem — clicável para abrir modal */}
         <div
@@ -141,7 +141,7 @@ function ProjectCard({ project, lang, reverse }) {
         </div>
       </article>
 
-      {/* ── MODAL ── */}
+      {/* Modal */}
       {modalOpen && (
         <div
           className="modal-overlay"
@@ -160,7 +160,7 @@ function ProjectCard({ project, lang, reverse }) {
               <FiX size={16} />
             </button>
 
-            {/* ── CARROSSEL ── */}
+            {/* Carrossel */}
             <div className="modal__carousel">
               {/* Imagem actual */}
               <div
@@ -179,7 +179,7 @@ function ProjectCard({ project, lang, reverse }) {
                 )}
               </div>
 
-              {/* Setas — só aparecem com mais de 1 imagem */}
+              {/* Setas */}
               {images.length > 1 && (
                 <>
                   <button
@@ -215,7 +215,7 @@ function ProjectCard({ project, lang, reverse }) {
               )}
             </div>
 
-            {/* ── CONTEÚDO DO MODAL ── */}
+            {/* Conteúdo do modal */}
             <div className="modal__content">
               {/* Tags */}
               <div className="proj-card__tags" style={{ marginBottom: "8px" }}>

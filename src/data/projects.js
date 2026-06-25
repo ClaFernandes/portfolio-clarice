@@ -1,10 +1,5 @@
-// ─── DADOS DOS PROJECTOS ──────────────────────────────
-// As imagens usam caminhos relativos sem BASE_URL
-// O BASE_URL é adicionado no componente ProjectCard.jsx
-// para funcionar correctamente no GitHub Pages
-
 const projects = [
-  // ── 1. AGENDLY ────────────────────────────────────────
+  // Agendly
   {
     id: 1,
     name: "Agendly",
@@ -37,7 +32,7 @@ const projects = [
     },
   },
 
-  // ── 2. PÁGINA & CIA ───────────────────────────────────
+  // Página & Cia
   {
     id: 2,
     name: "Página & Cia",
@@ -65,7 +60,7 @@ const projects = [
     teamInfo: null,
   },
 
-  // ── 3. FOCUS. ─────────────────────────────────────────
+  // Focus.
   {
     id: 3,
     name: "Focus.",
@@ -92,7 +87,7 @@ const projects = [
     teamInfo: null,
   },
 
-  // ── 4. FLAT FINDER ────────────────────────────────────
+  // Flat Finder
   {
     id: 4,
     name: "Flat Finder",

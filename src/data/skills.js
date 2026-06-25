@@ -1,13 +1,11 @@
 const skills = {
-  // Skills de desenvolvimento — destacadas em terracota
-  // Ordenadas por relevância para o mercado
+  // Skills de desenvolvimento
   dev: ["HTML", "CSS", "JavaScript", "React", "Git", "GitHub"],
 
-  // Ferramentas de apoio — aparência neutra
+  // Ferramentas de apoio 
   tools: ["Tailwind CSS", "Firebase", "Supabase", "Figma"],
 
   // Idiomas com nível
-  // name → nome do idioma | level → nível entre parênteses
   languages: [
     {
       namePt: "Português",

@@ -12,7 +12,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import translations from "../data/translations";
 import "../styles/contact.css";
 
-// ─── CONFIGURAÇÃO DO EMAILJS ───────────────────────────
+// Configuração EmailJS
 const EMAILJS_SERVICE_ID = "service_w1c0gyf";
 const EMAILJS_TEMPLATE_ID = "template_f43zavn";
 const EMAILJS_PUBLIC_KEY = "Nz7SS1kJtQ1vVGExL";
@@ -20,10 +20,10 @@ const EMAILJS_PUBLIC_KEY = "Nz7SS1kJtQ1vVGExL";
 function Contact({ lang }) {
   const t = translations[lang].contact;
 
-  // Referência ao formulário — usada pelo emailjs
+  // Referência ao formulário — usada pelo EmailJS
   const formRef = useRef();
 
-  // Estado do envio: null | 'sending' | 'success' | 'error'
+  // Estado do envio
   const [status, setStatus] = useState(null);
 
   // Envia o formulário via EmailJS
@@ -70,7 +70,6 @@ function Contact({ lang }) {
       icon: <IoLogoWhatsapp size={18} aria-hidden="true" />,
       label: t.whatsapp,
       value: "+351 913 194 094",
-      // O link abre o WhatsApp directamente com uma mensagem pré-definida
       href: "https://wa.me/351913194094",
     },
     {

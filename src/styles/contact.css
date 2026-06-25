@@ -1,14 +1,9 @@
-/* ─── CONTACTO ───────────────────────────────────────── */
-
-/* Grid 2 colunas: cards à esq, formulário à dir */
 .contact__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: flex-start;
 }
-
-/* ─── CARDS DE CONTACTO ──────────────────────────────── */
 
 .contact__cards {
   display: flex;
@@ -31,7 +26,6 @@
   border-color: var(--terracota-border);
 }
 
-/* Ícone com fundo terracota suave */
 .contact__card-icon {
   width: 36px;
   height: 36px;
@@ -68,8 +62,6 @@
 .contact__card-value--link:hover {
   color: var(--terracota);
 }
-
-/* ─── FORMULÁRIO ─────────────────────────────────────── */
 
 .contact__form {
   display: flex;
@@ -127,8 +119,6 @@
   cursor: not-allowed;
 }
 
-/* ─── FEEDBACK ───────────────────────────────────────── */
-
 .contact__feedback {
   display: flex;
   align-items: center;
@@ -151,5 +141,8 @@
 }
 
 @media (max-width: 768px) {
-  .contact__grid { grid-template-columns: 1fr; gap: 24px; }
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }

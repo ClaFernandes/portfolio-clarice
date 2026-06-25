@@ -25,7 +25,7 @@ function Timeline({ lang }) {
                   <div
                     className={`tl__dot ${item.current ? "tl__dot--active" : ""}`}
                   />
-                  {/* Linha vertical só existe entre itens (não no último) */}
+                  {/* Linha vertical entre itens */}
                   {!isLast && <div className="tl__line" />}
                 </div>
 
@@ -33,7 +33,6 @@ function Timeline({ lang }) {
                 <div className="tl__content">
                   <p className="tl__role">
                     {item.role[lang]}
-                    {/* Badge "agora" apenas no item atual */}
                     {item.current && <span className="tl__now">{t.now}</span>}
                   </p>
                   <p className="tl__place">{typeof item.place === 'object' ? item.place[lang] : item.place}</p>

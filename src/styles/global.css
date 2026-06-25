@@ -7,26 +7,26 @@
 }
 
 :root {
-  --petrol:         #1B3A4B;
-  --petrol-mid:     #3d5566;
-  --petrol-light:   #6a8a9e;
-  --petrol-xlight:  #96b4c2;
+  --petrol: #1B3A4B;
+  --petrol-mid: #3d5566;
+  --petrol-light: #6a8a9e;
+  --petrol-xlight: #96b4c2;
 
-  --terracota:       #C1440E;
+  --terracota: #C1440E;
   --terracota-light: rgba(193, 68, 14, 0.09);
-  --terracota-border:rgba(193, 68, 14, 0.22);
+  --terracota-border: rgba(193, 68, 14, 0.22);
 
-  --white:      #FFFFFF;
-  --cream:      #F9F8F5;
-  --border:     #EEEEEE;
-  --border-soft:#F4F4F4;
+  --white: #FFFFFF;
+  --cream: #F9F8F5;
+  --border: #EEEEEE;
+  --border-soft: #F4F4F4;
 
-  --color-bg:     var(--white);
+  --color-bg: var(--white);
   --color-bg-alt: var(--cream);
-  --color-text:   var(--petrol);
+  --color-text: var(--petrol);
   --color-accent: var(--terracota);
   --color-footer: var(--petrol);
-  --color-muted:  var(--petrol-mid);
+  --color-muted: var(--petrol-mid);
   --color-xmuted: var(--petrol-light);
 
   --font: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -75,7 +75,8 @@ a {
 }
 
 .section__inner {
-  padding: var(--section-y) 0;
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
 }
 
 .eyebrow {

@@ -19,7 +19,9 @@
   transform: translateY(-2px);
 }
 
-.proj-card--reverse { flex-direction: column; }
+.proj-card--reverse {
+  flex-direction: column;
+}
 
 .proj-card__img {
   height: 200px;
@@ -66,7 +68,9 @@
   transition: opacity 0.2s;
 }
 
-.proj-card__img:hover .proj-card__img-overlay { opacity: 1; }
+.proj-card__img:hover .proj-card__img-overlay {
+  opacity: 1;
+}
 
 .proj-card__body {
   padding: 20px 24px;
@@ -164,7 +168,6 @@
   background: rgba(193, 68, 14, 0.15);
 }
 
-/* ─── DESKTOP GRID ────────────────────────────────────── */
 @media (min-width: 640px) {
   .proj-list {
     display: grid;
@@ -173,7 +176,6 @@
   }
 }
 
-/* ─── MODAL ───────────────────────────────────────────── */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -187,8 +189,13 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .modal {
@@ -204,8 +211,15 @@
 }
 
 @keyframes slideUp {
-  from { transform: translateY(12px); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal__close {
@@ -226,13 +240,16 @@
   transition: color 0.2s;
 }
 
-.modal__close:hover { color: var(--petrol); }
+.modal__close:hover {
+  color: var(--petrol);
+}
 
 .modal__carousel {
   position: relative;
-  height: 260px;
+  height: 300px;
   overflow: hidden;
   border-radius: 16px 16px 0 0;
+  background: #111;
 }
 
 .modal__carousel-img {
@@ -246,8 +263,9 @@
 .modal__carousel-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 
 .modal__carousel-placeholder {
@@ -274,9 +292,17 @@
   z-index: 5;
 }
 
-.modal__carousel-btn:hover { background: var(--white); }
-.modal__carousel-btn--prev { left: 10px; }
-.modal__carousel-btn--next { right: 10px; }
+.modal__carousel-btn:hover {
+  background: var(--white);
+}
+
+.modal__carousel-btn--prev {
+  left: 10px;
+}
+
+.modal__carousel-btn--next {
+  right: 10px;
+}
 
 .modal__carousel-dots {
   position: absolute;
@@ -304,7 +330,9 @@
   transform: scale(1.25);
 }
 
-.modal__content { padding: 20px 24px 24px; }
+.modal__content {
+  padding: 20px 24px 24px;
+}
 
 .modal__title {
   font-size: 18px;
@@ -363,7 +391,6 @@
   gap: 8px;
 }
 
-/* ─── VER MAIS ────────────────────────────────────────── */
 .proj-more {
   display: flex;
   justify-content: flex-end;
@@ -390,26 +417,37 @@
   pointer-events: none;
 }
 
-/* ─── MOBILE ──────────────────────────────────────────── */
 @media (max-width: 639px) {
   .proj-list {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .proj-card__img { height: 150px; }
+  .proj-card__img {
+    height: 150px;
+  }
 
-  .proj-card__body { padding: 14px 16px 18px; }
+  .proj-card__body {
+    padding: 14px 16px 18px;
+  }
 
-  .proj-card__name { font-size: 15px; }
+  .proj-card__name {
+    font-size: 15px;
+  }
 
-  .proj-card__desc { font-size: 12px; }
+  .proj-card__desc {
+    font-size: 12px;
+  }
 
-  .proj-card__btns { gap: 6px; }
+  .proj-card__btns {
+    gap: 6px;
+  }
 
-  .proj-btn { font-size: 11px; padding: 6px 11px; }
+  .proj-btn {
+    font-size: 11px;
+    padding: 6px 11px;
+  }
 
-  /* Modal sobe da base */
   .modal-overlay {
     padding: 0;
     align-items: flex-end;
@@ -422,13 +460,30 @@
   }
 
   .modal__carousel {
-    height: 180px;
+    height: 220px;
     border-radius: 20px 20px 0 0;
   }
 
-  .modal__content { padding: 14px 16px 24px; }
+  .modal__carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
 
-  .modal__title { font-size: 16px; }
+  .modal__carousel-btn--prev {
+    left: 8px;
+  }
+
+  .modal__carousel-btn--next {
+    right: 8px;
+  }
+
+  .modal__content {
+    padding: 14px 16px 24px;
+  }
+
+  .modal__title {
+    font-size: 16px;
+  }
 
   .modal__desc {
     font-size: 12px;
@@ -436,7 +491,13 @@
     margin-bottom: 12px;
   }
 
-  .modal__pill { font-size: 10px; padding: 3px 10px; }
+  .modal__pill {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
 
-  .proj-more { justify-content: center; margin-top: 16px; }
+  .proj-more {
+    justify-content: center;
+    margin-top: 16px;
+  }
 }

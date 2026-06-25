@@ -3,9 +3,9 @@ const translations = {
   pt: {
     nav: {
       about: "Sobre",
-      projects: "Projectos",
-      skills: "Skills",
-      timeline: "Trajectória",
+      projects: "Projetos",
+      skills: "Competências",
+      timeline: "Trajetória",
       contact: "Contacto",
     },
 
@@ -16,7 +16,7 @@ const translations = {
       name: "Clarice",
       surname: "Fernandes",
       desc: "Aprendi a contar histórias em palavras. Agora conto-as em código. Desenvolvo interfaces que comunicam.",
-      btnProjects: "Ver projectos",
+      btnProjects: "Ver projetos",
       btnCV: "Download CV",
       location: "Lisboa, Portugal",
     },
@@ -29,16 +29,16 @@ const translations = {
 
     projects: {
       eyebrow: "O que construí",
-      title: "Projectos",
-      btnSee: "Ver projecto ↗",
+      title: "Projetos",
+      btnSee: "Ver projeto ↗",
       btnGithub: "Ver no GitHub ↗",
-      teamBadge: "Projecto em dupla",
+      teamBadge: "Projeto em dupla",
       seeMore: "Ver mais no GitHub ↗",
     },
 
     skills: {
-      eyebrow: "Ferramentas",
-      title: "Skills",
+      eyebrow: "Competências",
+      title: "Competências",
       dev: "Desenvolvimento",
       tools: "Ferramentas",
       langs: "Idiomas",
@@ -46,7 +46,7 @@ const translations = {
 
     timeline: {
       eyebrow: "Percurso",
-      title: "Trajectória",
+      title: "Trajetória",
       now: "agora",
     },
 
@@ -114,7 +114,7 @@ const translations = {
     },
 
     skills: {
-      eyebrow: "Tools",
+      eyebrow: "Skills",
       title: "Skills",
       dev: "Development",
       tools: "Tools",

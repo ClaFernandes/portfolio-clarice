@@ -12,11 +12,10 @@ function Skills({ lang }) {
         <h2 className="section-title">{t.title}</h2>
 
         <div className="skills__cols">
-          {/* Coluna 1 — Desenvolvimento */}
           <div className="skills__col">
-            <p className="skills__col-label">{t.dev}</p>
+            <p className="skills__col-label">{t.frontend}</p>
             <div className="skills__pills">
-              {skills.dev.map((skill) => (
+              {skills.frontend.map((skill) => (
                 <span key={skill} className="skills__pill skills__pill--hl">
                   {skill}
                 </span>
@@ -24,7 +23,17 @@ function Skills({ lang }) {
             </div>
           </div>
 
-          {/* Coluna 2 — Ferramentas */}
+          <div className="skills__col">
+            <p className="skills__col-label">{t.backend}</p>
+            <div className="skills__pills">
+              {skills.backend.map((skill) => (
+                <span key={skill} className="skills__pill skills__pill--hl">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
           <div className="skills__col">
             <p className="skills__col-label">{t.tools}</p>
             <div className="skills__pills">
@@ -36,7 +45,6 @@ function Skills({ lang }) {
             </div>
           </div>
 
-          {/* Coluna 3 — Idiomas com nível */}
           <div className="skills__col">
             <p className="skills__col-label">{t.langs}</p>
             <div className="skills__pills">

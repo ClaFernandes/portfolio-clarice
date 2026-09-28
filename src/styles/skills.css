@@ -1,7 +1,7 @@
 .skills__cols {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 40px;
 }
 
 .skills__col-label {
@@ -44,7 +44,6 @@
   font-weight: 400;
 }
 
-/* ─── MOBILE ─────────────────────────────────────────── */
 @media (max-width: 640px) {
   .skills__cols {
     grid-template-columns: 1fr;

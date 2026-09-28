@@ -17,19 +17,15 @@ function Timeline({ lang }) {
 
             return (
               <div key={item.id} className="tl__item">
-                {/* Ano / período */}
                 <div className="tl__period">{item.period[lang]}</div>
 
-                {/* Marcador visual — ponto + linha vertical */}
                 <div className="tl__marker" aria-hidden="true">
                   <div
                     className={`tl__dot ${item.current ? "tl__dot--active" : ""}`}
                   />
-                  {/* Linha vertical entre itens */}
                   {!isLast && <div className="tl__line" />}
                 </div>
 
-                {/* Conteúdo */}
                 <div className="tl__content">
                   <p className="tl__role">
                     {item.role[lang]}

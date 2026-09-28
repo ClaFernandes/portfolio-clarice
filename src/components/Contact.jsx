@@ -12,7 +12,6 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import translations from "../data/translations";
 import "../styles/contact.css";
 
-// Configuração EmailJS
 const EMAILJS_SERVICE_ID = "service_w1c0gyf";
 const EMAILJS_TEMPLATE_ID = "template_f43zavn";
 const EMAILJS_PUBLIC_KEY = "Nz7SS1kJtQ1vVGExL";
@@ -20,13 +19,10 @@ const EMAILJS_PUBLIC_KEY = "Nz7SS1kJtQ1vVGExL";
 function Contact({ lang }) {
   const t = translations[lang].contact;
 
-  // Referência ao formulário — usada pelo EmailJS
   const formRef = useRef();
 
-  // Estado do envio
   const [status, setStatus] = useState(null);
 
-  // Envia o formulário via EmailJS
   async function handleSubmit(e) {
     e.preventDefault();
     setStatus("sending");
@@ -46,7 +42,6 @@ function Contact({ lang }) {
     }
   }
 
-  // Cards de informação de contacto
   const contactCards = [
     {
       icon: <HiOutlineMail size={18} aria-hidden="true" />,
@@ -87,7 +82,6 @@ function Contact({ lang }) {
         <h2 className="section-title">{t.title}</h2>
 
         <div className="contact__grid">
-          {/* Cards de contacto */}
           <div className="contact__cards">
             {contactCards.map((card) => (
               <div key={card.label} className="contact__card">
@@ -115,7 +109,6 @@ function Contact({ lang }) {
             ))}
           </div>
 
-          {/* Formulário de contacto */}
           <form
             ref={formRef}
             onSubmit={handleSubmit}

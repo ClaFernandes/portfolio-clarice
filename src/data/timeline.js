@@ -1,14 +1,14 @@
 const timeline = [
   {
     id: 1,
-    period: { pt: '2025 – hoje', en: '2025 – present' },
+    period: { pt: '2025 – 2026', en: '2025 – 2026' },
     role: {
-      pt: 'Full-Stack Developer (em formação)',
-      en: 'Full-Stack Developer (in training)',
+      pt: 'Formação Full-Stack Developer',
+      en: 'Full-Stack Developer Training',
     },
     place: { pt: 'TechOf · Lisboa, Portugal', en: 'TechOf · Lisbon, Portugal' },
-    current: true,
-    type: 'dev',
+    current: false,
+    type: 'education',
   },
   {
     id: 2,

@@ -1,7 +1,35 @@
 const projects = [
-  // Agendly
   {
     id: 1,
+    name: "Mentora",
+    tag: "React + Node.js",
+    shortPt:
+      "Comunidade de mentorias pagas: rede social, agendamento de sessões e pagamentos online. Projeto final full-stack.",
+    shortEn:
+      "Paid mentorship community: social network, session booking and online payments. Full-stack final project.",
+    descPt:
+      "Plataforma full-stack onde profissionais experientes oferecem sessões de mentoria pagas. Três perfis de utilizador (mentor, mentorado e administrador) com autenticação JWT e recuperação de palavra-passe por email. Os mentores publicam no feed, criam ofertas por área e nível e definem a sua disponibilidade semanal; o backend gera os horários livres de cada dia, excluindo os já ocupados. O mentorado segue mentores, favorita ofertas, agenda e paga via Stripe Checkout, com confirmação automática por webhook e reembolso em caso de cancelamento. Inclui chat por oferta, avaliações, notificações, upload de imagens com Cloudinary, painel de administração com moderação e estatísticas, e tema claro/escuro. API REST publicada em funções serverless no Vercel.",
+    descEn:
+      "Full-stack platform where experienced professionals offer paid mentoring sessions. Three user roles (mentor, mentee and admin) with JWT authentication and password recovery by email. Mentors post to the feed, create offerings by area and level and set their weekly availability; the backend generates each day's free time slots, excluding those already booked. Mentees follow mentors, save offerings as favourites, book and pay via Stripe Checkout, with automatic confirmation through webhooks and refunds on cancellation. Includes per-offering chat, ratings, notifications, image upload with Cloudinary, an admin panel with moderation and statistics, and light/dark theme. REST API deployed as serverless functions on Vercel.",
+    stack:
+      "React · Node.js · Express · MongoDB · Mongoose · JWT · Stripe · Cloudinary · Nodemailer · Vercel",
+    images: [
+      "assets/mentora-landing.jpg",
+      "assets/mentora-feed.jpg",
+      "assets/mentora-perfil.jpg",
+      "assets/mentora-agendamento.jpg",
+      "assets/mentora-sessoes.jpg",
+      "assets/mentora-admin.jpg",
+    ],
+    link: "https://mentora-frontend-zeta.vercel.app/mentora",
+    github: "https://github.com/ClaFernandes/mentora",
+    bg: "linear-gradient(135deg, #2B2D33, #45474f)",
+    team: false,
+    teamInfo: null,
+  },
+
+  {
+    id: 2,
     name: "Agendly",
     tag: "React + Supabase",
     shortPt:
@@ -32,9 +60,8 @@ const projects = [
     },
   },
 
-  // Página & Cia
   {
-    id: 2,
+    id: 3,
     name: "Página & Cia",
     tag: "React",
     shortPt:
@@ -60,9 +87,8 @@ const projects = [
     teamInfo: null,
   },
 
-  // Focus.
   {
-    id: 3,
+    id: 4,
     name: "Focus.",
     tag: "React + Firebase",
     shortPt:
@@ -83,33 +109,6 @@ const projects = [
     link: "https://clafernandes.github.io/focus-v2/login",
     github: "https://github.com/ClaFernandes/focus-v2",
     bg: "linear-gradient(135deg, #0d0d1a, #1a0a2e)",
-    team: false,
-    teamInfo: null,
-  },
-
-  // Flat Finder
-  {
-    id: 4,
-    name: "Flat Finder",
-    tag: "JavaScript",
-    shortPt:
-      "Plataforma de gestão de imóveis em JavaScript puro com CRUD completo e autenticação por proprietário.",
-    shortEn:
-      "Property management platform in vanilla JavaScript with full CRUD and owner-based authentication.",
-    descPt:
-      "Aplicação web desenvolvida em JavaScript puro sem frameworks. Simula uma plataforma de gestão de imóveis para arrendamento com autenticação por email, CRUD completo de imóveis, filtros por cidade, preço e área, sistema de favoritos e perfil editável. Arquitectura modular por página com injeção dinâmica de header e footer. Cada utilizador vê apenas os seus próprios imóveis. Persistência com localStorage e IDs únicos com crypto.randomUUID().",
-    descEn:
-      "Web application built in vanilla JavaScript without frameworks. Simulates a rental property management platform with email authentication, full property CRUD, filters by city, price and area, favourites system and editable profile. Modular page architecture with dynamic header and footer injection. Each user only sees their own properties. Persistence with localStorage and unique IDs using crypto.randomUUID().",
-    stack: "HTML · CSS · JavaScript · localStorage · CSS Flexbox",
-    images: [
-      "assets/flatfinder-imoveis.jpg",
-      "assets/flatfinder-login.jpg",
-      "assets/flatfinder-novo.jpg",
-      "assets/flatfinder-favoritos.jpg",
-    ],
-    link: "https://clafernandes.github.io/flat-finder/login.html",
-    github: "https://github.com/ClaFernandes/flat-finder",
-    bg: "linear-gradient(135deg, #0d1f2e, #1a3a52)",
     team: false,
     teamInfo: null,
   },

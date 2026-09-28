@@ -48,9 +48,17 @@
 }
 
 @keyframes tl-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(193, 68, 14, 0.4); }
-  70%  { box-shadow: 0 0 0 6px rgba(193, 68, 14, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(193, 68, 14, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(193, 68, 14, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 6px rgba(193, 68, 14, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(193, 68, 14, 0);
+  }
 }
 
 .tl__line {
@@ -86,7 +94,6 @@
   color: var(--petrol-mid);
 }
 
-/* ─── MOBILE ─────────────────────────────────────────── */
 @media (max-width: 540px) {
   .tl__item {
     grid-template-columns: 65px 14px 1fr;

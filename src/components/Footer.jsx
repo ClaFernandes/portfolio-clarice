@@ -8,7 +8,6 @@ function Footer({ lang }) {
 
   return (
     <footer className="footer">
-      {/* Wave de transição */}
       <svg
         className="footer__wave"
         viewBox="0 0 1200 28"

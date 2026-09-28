@@ -58,8 +58,17 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.55; transform: scale(0.82); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(0.82);
+  }
 }
 
 .hero__badge-text {
@@ -172,7 +181,6 @@
   white-space: nowrap;
 }
 
-/* ─── MOBILE ─────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero__inner {
     grid-template-columns: 1fr;

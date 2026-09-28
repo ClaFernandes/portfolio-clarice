@@ -1,11 +1,10 @@
 const skills = {
-  // Skills de desenvolvimento
-  dev: ["HTML", "CSS", "JavaScript", "React", "Git", "GitHub"],
+  frontend: ["HTML", "CSS", "JavaScript", "React"],
 
-  // Ferramentas de apoio 
-  tools: ["Tailwind CSS", "Firebase", "Supabase", "Figma"],
+  backend: ["Node.js", "Express", "MongoDB", "Mongoose", "SQL", "APIs REST"],
 
-  // Idiomas com nível
+
+  tools: ["Git", "GitHub", "Tailwind CSS", "Firebase", "Supabase", "Stripe", "Postman", "Vercel", "Figma"],
   languages: [
     {
       namePt: "Português",

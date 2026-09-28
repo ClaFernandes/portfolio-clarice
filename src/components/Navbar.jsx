@@ -6,7 +6,6 @@ import "../styles/navbar.css";
 function Navbar({ lang, setLang }) {
   const t = translations[lang].nav;
 
-  // Controla se a navbar tem sombra após scroll
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,7 +14,6 @@ function Navbar({ lang, setLang }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Links de navegação
   const links = [
     { to: "sobre", label: t.about },
     { to: "projetos", label: t.projects },
@@ -27,12 +25,10 @@ function Navbar({ lang, setLang }) {
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__inner">
-        {/* Logo */}
         <span className="navbar__logo">
           Clarice<span className="navbar__dot">.</span>
         </span>
 
-        {/* Links */}
         <div className="navbar__links">
           {links.map((link) => (
             <Link
@@ -47,7 +43,6 @@ function Navbar({ lang, setLang }) {
             </Link>
           ))}
 
-          {/* Toggle PT / EN */}
           <div className="navbar__lang">
             <button
               className={`navbar__lang-btn ${lang === "pt" ? "navbar__lang-btn--active" : ""}`}

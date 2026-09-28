@@ -14,34 +14,27 @@ import "../styles/projects.css";
 function ProjectCard({ project, lang, reverse }) {
   const t = translations[lang].projects;
 
-  // Controla se o modal está aberto
   const [modalOpen, setModalOpen] = useState(false);
 
-  // Índice da imagem actual no carrossel
   const [imgIndex, setImgIndex] = useState(0);
 
-  // Descrições e textos no idioma actual
   const desc = lang === "pt" ? project.descPt : project.descEn;
   const shortDesc = lang === "pt" ? project.shortPt : project.shortEn;
   const teamInfo =
     project.team && project.teamInfo ? project.teamInfo[lang] : null;
 
-  // Imagens válidas 
   const images = (project.images || []).filter(Boolean);
 
-  // Navega para a imagem anterior no carrossel
   function prevImg(e) {
     e.stopPropagation();
     setImgIndex((i) => (i === 0 ? images.length - 1 : i - 1));
   }
 
-  // Navega para a imagem seguinte no carrossel
   function nextImg(e) {
     e.stopPropagation();
     setImgIndex((i) => (i === images.length - 1 ? 0 : i + 1));
   }
 
-  // Abre o modal e reinicia o carrossel na primeira imagem
   function openModal() {
     setImgIndex(0);
     setModalOpen(true);
@@ -51,16 +44,13 @@ function ProjectCard({ project, lang, reverse }) {
     setModalOpen(false);
   }
 
-  // Fecha o modal ao clicar no overlay (fundo escuro)
   function handleOverlayClick(e) {
     if (e.target === e.currentTarget) closeModal();
   }
 
   return (
     <>
-      {/* Card */}
       <article className={`proj-card ${reverse ? "proj-card--reverse" : ""}`}>
-        {/* Área da imagem — clicável para abrir modal */}
         <div
           className="proj-card__img"
           style={{ background: project.bg }}
@@ -70,7 +60,6 @@ function ProjectCard({ project, lang, reverse }) {
           aria-label={`Ver detalhes de ${project.name}`}
           onKeyDown={(e) => e.key === "Enter" && openModal()}
         >
-          {/* Imagem real ou fundo com letra inicial */}
           {images[0] ? (
             <img
               src={`${import.meta.env.BASE_URL}${images[0]}`}
@@ -83,17 +72,14 @@ function ProjectCard({ project, lang, reverse }) {
             </span>
           )}
 
-          {/* Overlay de hover */}
           <div className="proj-card__img-overlay" aria-hidden="true">
             <FiInfo size={14} />
             <span>Ver detalhes</span>
           </div>
         </div>
 
-        {/* Corpo do card */}
         <div className="proj-card__body">
           <div>
-            {/* Badge de stack + badge de equipa (se aplicável) */}
             <div className="proj-card__tags">
               <span className="proj-card__tag">{project.tag}</span>
               {project.team && (
@@ -109,7 +95,6 @@ function ProjectCard({ project, lang, reverse }) {
             <p className="proj-card__stack">{project.stack}</p>
           </div>
 
-          {/* Botões de acção */}
           <div className="proj-card__btns">
             <button className="proj-btn proj-btn--outline" onClick={openModal}>
               <FiInfo size={12} aria-hidden="true" />
@@ -141,7 +126,6 @@ function ProjectCard({ project, lang, reverse }) {
         </div>
       </article>
 
-      {/* Modal */}
       {modalOpen && (
         <div
           className="modal-overlay"
@@ -151,7 +135,6 @@ function ProjectCard({ project, lang, reverse }) {
           aria-label={project.name}
         >
           <div className="modal">
-            {/* Botão fechar */}
             <button
               className="modal__close"
               onClick={closeModal}
@@ -160,9 +143,7 @@ function ProjectCard({ project, lang, reverse }) {
               <FiX size={16} />
             </button>
 
-            {/* Carrossel */}
             <div className="modal__carousel">
-              {/* Imagem actual */}
               <div
                 className="modal__carousel-img"
                 style={{ background: project.bg }}
@@ -179,7 +160,6 @@ function ProjectCard({ project, lang, reverse }) {
                 )}
               </div>
 
-              {/* Setas */}
               {images.length > 1 && (
                 <>
                   <button
@@ -197,7 +177,6 @@ function ProjectCard({ project, lang, reverse }) {
                     <FiChevronRight size={18} />
                   </button>
 
-                  {/* Pontinhos indicadores */}
                   <div className="modal__carousel-dots" aria-hidden="true">
                     {images.map((_, i) => (
                       <button
@@ -215,9 +194,7 @@ function ProjectCard({ project, lang, reverse }) {
               )}
             </div>
 
-            {/* Conteúdo do modal */}
             <div className="modal__content">
-              {/* Tags */}
               <div className="proj-card__tags" style={{ marginBottom: "8px" }}>
                 <span className="proj-card__tag">{project.tag}</span>
                 {project.team && (
@@ -230,7 +207,6 @@ function ProjectCard({ project, lang, reverse }) {
 
               <h3 className="modal__title">{project.name}</h3>
 
-              {/* Nota de equipa */}
               {teamInfo && (
                 <p className="modal__team-note">
                   <FiUsers size={12} aria-hidden="true" />
@@ -240,7 +216,6 @@ function ProjectCard({ project, lang, reverse }) {
 
               <p className="modal__desc">{desc}</p>
 
-              {/* Pills da stack */}
               <p className="modal__stack-label">Stack</p>
               <div className="modal__pills">
                 {project.stack.split(" · ").map((tech) => (
@@ -250,7 +225,6 @@ function ProjectCard({ project, lang, reverse }) {
                 ))}
               </div>
 
-              {/* Links */}
               <div className="modal__btns">
                 {project.github && (
                   <a

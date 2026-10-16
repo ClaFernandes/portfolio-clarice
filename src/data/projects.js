@@ -106,7 +106,7 @@ const projects = [
       "assets/focus-login.jpg",
       "assets/focus-detalhe.jpg",
     ],
-    link: "https://clafernandes.github.io/focus-v2/login",
+    link: "https://clafernandes.github.io/focus-v2/",
     github: "https://github.com/ClaFernandes/focus-v2",
     bg: "linear-gradient(135deg, #0d0d1a, #1a0a2e)",
     team: false,
